@@ -6,10 +6,11 @@ const isChinese = require('is-chinese');
 const urlencode = require('urlencode');
 const parser = require('./parser');
 
+const hint = '使用方式：nwd <中文城市名称>\nUsage: nwd <CITY_NAME_IN_CHINESE>';
 let word = process.argv.slice(2).join('');
 
 if(!word || !isChinese(word)){
-    console.log('使用方式：nwd <中文城市名称>\nUsage: nwd <CITY_NAME_IN_CHINESE>');
+    console.log(hint);
     process.exit();
 }
 
